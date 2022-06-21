@@ -1,5 +1,10 @@
 const section = document.getElementById('villes');
-
+const button = document.querySelector('.lang');
+const h1 = document.querySelector('h1');
+button.addEventListener('click', ()=>{
+    h1.innerHTML="Weather APP";
+})
+console.log(h1)
 const villes = [
     {
         ville: "Lyon",
@@ -25,7 +30,7 @@ const villes = [
         ville: "Orléans",
         img: "img/wind.png",
         temp: 25
-    }
+    },
 ]
 for(let i = 0; i < villes.length; i++){
     section.innerHTML += `<article class="ville">
