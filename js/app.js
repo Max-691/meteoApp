@@ -1,42 +1,37 @@
 const section = document.getElementById('villes');
 
-const tb_villes =  ["Lyon", "Paris", "Marseille", "Lille", "Nice", "Dijon", "Mions", "Toussieu", "Oullin", "Vaulx"];
-
-const tb_temps = [15, 18, 14, 28, 12, 5, 32, 25, 17, 21];
-
 const villes = [
     {
-        tb_villes: `${tb_villes}`,
-        tb_temps: `${tb_temps}`,
-        ville: `${tb_villes[0]}`,
+        ville: "Lyon",
         img: "img/sun.jpg",
-        temp: `${tb_temps[0]}`
+        temp: 35
+    },
+    {
+        ville: "Paris",
+        img: "img/sun.jpg",
+        temp: 40
+    },
+    {
+        ville: "Nice",
+        img: "img/wind.png",
+        temp: 35
+    },
+    {
+        ville: "Lille",
+        img: "img/cloudy.jpg",
+        temp: 30
+    },
+    {
+        ville: "Orléans",
+        img: "img/wind.png",
+        temp: 25
     }
 ]
 for(let i = 0; i < villes.length; i++){
     section.innerHTML += `<article class="ville">
-    <h2></h2>
-    <img src="img/wind.png" alt="wind">
-    <p>15°</p>
+    <h2>${villes[i].ville}</h2>
+    <img src="${villes[i].img}" alt="wind">
+    <p>${villes[i].temp}°</p>
 </article>
-<article class="ville">
-    <h2>Lyon</h2>
-    <img src="img/sun.jpg" alt="sun">
-    <p>25°</p>
-</article>
-<article class="ville">
-    <h2>Lyon</h2>
-    <img src="img/rain.jpg" alt="rain">
-    <p>14°</p>
-</article>
-<article class="ville">
-    <h2>Lyon</h2>
-    <img src="img/sun.jpg" alt="sun">
-    <p>18°</p>
-</article>
-<article class="ville">
-    <h2>Lyon</h2>
-    <img src="img/cloudy.jpg" alt="cloudy">
-    <p>13°</p>
-</article>`
-}
+
+`}
